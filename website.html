@@ -343,76 +343,84 @@ const map = L.map('map', {
 });
 
 // === WMS Layers from GeoServer ===
-const geoserverUrl = "http://localhost:8080/geoserver/GEE/wms";
-
+const geoserverUrl = "http://localhost:8080/geoserver/iso/wms";
+const selectedTime = '2015-01-01';
 const atmLayer = L.tileLayer.wms(geoserverUrl, {
-  layers: 'GEE:atm',
+  layers: '	iso:amenity_atm',
   format: 'image/png',
   transparent: true,
   version: '1.1.0',
+  time: selectedTime,
   attribution: 'ATM - GeoServer',
   zIndex: 500
 });
 
 const bankLayer = L.tileLayer.wms(geoserverUrl, {
-  layers: 'GEE:bank',
+  layers: '	iso:amenity_bank',
   format: 'image/png',
   transparent: true,
   version: '1.1.0',
+  time: selectedTime,
   attribution: 'Bank - GeoServer',
   zIndex: 500
 });
 
 const cinemaLayer = L.tileLayer.wms(geoserverUrl, {
-  layers: 'GEE:cinema',
+  layers: '	iso:amenity_cinema',
   format: 'image/png',
   transparent: true,
   version: '1.1.0',
+  time: selectedTime,
   attribution: 'Cinema - GeoServer',
   zIndex: 500
 });
 
 const fuelLayer = L.tileLayer.wms(geoserverUrl, {
-  layers: 'GEE:fuel_station',
+  layers: 'iso:amenity_fuel',
   format: 'image/png',
   transparent: true,
   version: '1.1.0',
+  time: selectedTime,
   attribution: 'Fuel Station - GeoServer',
   zIndex: 500
 });
 
 const hospitalLayer = L.tileLayer.wms(geoserverUrl, {
-  layers: 'GEE:hospital',
+  layers: 'iso:amenity_hospital',
   format: 'image/png',
   transparent: true,
   version: '1.1.0',
+  time: selectedTime,
   attribution: 'Hospital - GeoServer',
   zIndex: 500
 });
 
 const pharmacyLayer = L.tileLayer.wms(geoserverUrl, {
-  layers: 'GEE:pharmacy',
+  layers: 'iso:amenity_pharmacy',
   format: 'image/png',
   transparent: true,
   version: '1.1.0',
+  time: selectedTime,
   attribution: 'Pharmacy - GeoServer',
   zIndex: 500
 });
 
 const policeLayer = L.tileLayer.wms(geoserverUrl, {
-  layers: 'GEE:police_station',
+  layers: 'iso:amenity_police',
   format: 'image/png',
   transparent: true,
   version: '1.1.0',
+  time: selectedTime,
   attribution: 'Police Station - GeoServer',
   zIndex: 500
 });
 
 const schoolLayer = L.tileLayer.wms(geoserverUrl, {
-  layers: 'GEE:school',
+  layers: '	iso:scl',
   format: 'image/png',
   transparent: true,
   version: '1.1.0',
+  time: selectedTime,
   attribution: 'School - GeoServer',
   zIndex: 500
 });
